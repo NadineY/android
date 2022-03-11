@@ -45,12 +45,12 @@
             </RelativeLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputEmail"
+                android:id="@+id/LtextInputEmail"
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin">
 
                 <EditText
-                    android:id="@+id/editTextEmail"
+                    android:id="@+id/LeditTextEmail"
                     style="@style/modifiedEditText"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
@@ -58,12 +58,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputPassword"
+                android:id="@+id/LtextInputPassword"
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin">
 
                 <EditText
-                    android:id="@+id/editTextPassword"
+                    android:id="@+id/LeditTextPassword"
                     style="@style/modifiedEditText"
                     android:hint="Password"
                     android:inputType="textPassword"
@@ -134,18 +134,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_facebook" />
+                    android:id="@+id/empreinte"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_baseline_fingerprint_24" />
 
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_google_plus" />
+                    android:text="@string/empreinte"
+                    android:textColor="@color/bleu" />
+
+
             </LinearLayout>
 
         </LinearLayout>

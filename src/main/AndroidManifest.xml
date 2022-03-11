@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -18,26 +20,32 @@
         android:theme="@style/Theme.MyFit">
         <activity
             android:name=".CategoriesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Splash" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            />
+        <activity android:name=".Splash" />
+
+
+   <activity android:name=".RegisterActivity"
+       android:exported="true"
+       android:theme="@style/AppTheme.NoActionBar" >
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+    </activity>
     </application>
 
 </manifest>

@@ -34,11 +34,26 @@
                     android:textColor="@color/whiteTextColor" />
 
                 <ImageView
+                    android:id="@+id/pdp"
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/insciption" />
+                    android:layout_marginBottom="0dp"
+                    android:paddingBottom="0dp"
+                    android:src="@drawable/ic_baseline_account_circle_24" />
+
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/pdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-32dp"
+                    android:layout_marginRight="121dp"
+                    android:background="@drawable/round_img_btn"
+                    android:text="+"
+                    android:textStyle="bold"/>
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
@@ -55,12 +70,14 @@
                     android:orientation="vertical">
 
                     <RadioGroup
+                        android:id="@+id/sexe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <RadioButton
+                            android:id="@+id/radio_h"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
@@ -69,9 +86,11 @@
                             android:elevation="4dp"
                             android:padding="16dp"
                             android:text="Homme"
-                            android:textColor="@drawable/radio_text_color" />
+                            android:textColor="@drawable/radio_text_color"
+                            tools:ignore="DuplicateIds" />
 
                         <RadioButton
+                            android:id="@+id/radio_f"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
