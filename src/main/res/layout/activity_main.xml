@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+  <RelativeLayout
+      android:id="@+id/activity_main"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.myfit.MainActivity"
+      android:background="@color/bleu">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      android:id="@+id/bar_logo"
+      android:background="@color/white">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo" />
+  </RelativeLayout>
+
+
+//Scroll1
+
+  <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/Scroll1"
+      android:layout_below="@id/bar_logo">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:weightSum="10">
+
+  <GridLayout
+      android:layout_width="wrap_content"
+      android:layout_height="180dp"
+      android:layout_marginStart="5dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:rowCount="1"
+      android:columnCount="5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/img00"
+      android:layout_width="150dp"
+      android:layout_height="0dp"
+      android:layout_rowWeight="1"
+      android:layout_columnWeight="1"
+      android:layout_margin="10dp"
+      app:cardCornerRadius="35dp"
+      app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:src="@drawable/img00" />
+    </RelativeLayout>
+  </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img01"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="0dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img02" />
+      </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img03"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="0dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img3" />
+      </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img04"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="0dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img06" />
+      </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+  </GridLayout>
+  </LinearLayout>
+  </HorizontalScrollView>
+
+
+// Partie Caroussel
+
+  <androidx.viewpager.widget.ViewPager
+      android:id="@+id/viewPager"
+      style="@style/CardView"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_below="@+id/Scroll1"
+      android:layout_marginTop="15dp" />
+
+  <LinearLayout
+      android:id="@+id/SliderDots"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/viewPager"
+      android:gravity="center_vertical|center_horizontal"
+      android:orientation="horizontal"
+      android:paddingTop="0dp"></LinearLayout>
+
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/SliderDots">
+  //Scroll2
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_below="@+id/SliderDots">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandongrotesquebolditalic"
+        android:textSize="50sp"
+        android:textColor="@color/whiteTextColor"
+        android:text="Bienvenue chez My Fitness App"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:rowCount="1"
+        android:columnCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/img1"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_margin="10dp"
+          app:cardCornerRadius="35dp"
+          app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:src="@drawable/img11" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerInParent="true"
+              android:fontFamily="@font/brandongrotesquebolditalic"
+              android:paddingLeft="60dp"
+              android:text="Envie De Faire du Sport ?\n               Rien De Plus Facile"
+              android:textColor="@color/green"
+              android:textSize="25dp" />
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+      <GridLayout
+          android:layout_width="match_parent"
+          android:layout_height="220dp"
+          android:layout_marginStart="5dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginBottom="10dp"
+          android:rowCount="1"
+          android:columnCount="1"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="0dp">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img12" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/brandongrotesquebolditalic"
+                android:paddingLeft="30dp"
+                android:text="Detendez-Vous Avec Notre Session YOGA "
+                android:textColor="@color/green"
+                android:textSize="20dp" />
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+      </GridLayout>
+
+    </LinearLayout>
+
+
+  </ScrollView>
+
+  </RelativeLayout>
